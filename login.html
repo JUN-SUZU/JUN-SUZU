@@ -5,19 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ショップジェネレーター Login</title>
 	<link rel="stylesheet" type="text/css" href="login.css">
-  <link rel="php" type="text/php" href="login.php">
+  <script type="text/javascript" src="login.js"></script>
 </head>
 <body>
-  <h1>ログイン画面</h1>
+  <h1>マイアカウントにログイン</h1>
 
 <div class="signin">
-    <form action="" method="POST">
-        <label for="signin-id">アカウント名</label>
-        <input id="signin-id" name="username" type="text" placeholder="メールアドレスを入力">
-        <label for="signin-pass">パスワード</label>
-        <input id="signin-pass" name="password" type="text" placeholder="パスワードを入力">
-        <button name="signin" type="submit">ログインする</button>
-    </form>
+  <form action="https://script.google.com/macros/s/AKfycbyo4LoBVr6GZh3Lf60CuulM8XbKyEsinJs7smIyEaIojGf588lK2MnytLIz8MEJ5dP9/exec" method="POST">
+      <label for="signin-id">ユーザ名</label><br>
+      <input id="signin-id" name="gamertag" type="text" placeholder="ゲーマータグを入力"><br>
+      <label for="signin-pass">パスワード</label><br>
+      <input id="signin-pass" name="password" type="password" placeholder="パスワードを入力"><br>
+      <button name="signin" type="submit">ログインする</button>
+  </form>
 </div>
 
 </body>

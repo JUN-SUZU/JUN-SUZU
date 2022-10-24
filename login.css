@@ -7,30 +7,17 @@ h1 {
   text-align: center;
 }
 form {
-  width: 400px;
+  width: 60%;
   margin: 0 auto;
+  font-size: 28px;
+  text-align: center;
 }
-.err_msg {
-  color: #ff838b;
-  font-size: 1.5em;
+input{
+  width: 60%;
+  font-size: 80%;
+  text-align: center;
 }
-label {
-  height: 60px;
-  display: block;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-label span {
-  box-sizing: border-box;
-  height: 50px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  display: block;
-  float: left;
-}
-label input {
-  display: block;
-  float: right;
-  height: 30px;
-  margin-top: 20px;
+button{
+  width: 30%;
+  font-size: 32px;
 }
