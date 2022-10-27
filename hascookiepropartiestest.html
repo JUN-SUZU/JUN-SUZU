@@ -13,7 +13,7 @@
         var elem = document.getElementById("checked");
         // キャッシュがあるか
         if(document.cookie !== ""){
-          elem.innerHTML = "<p style='color: yellow;'>ある</p>";
+          elem.innerHTML += "<p style='color: yellow;'>ある</p>";
           var w = document.cookie.split( '; ' );
           alert(w);
         } else {
@@ -23,7 +23,7 @@
 
           document.cookie = 'data=123;expires=' + expire.toUTCString();
           document.cookie = 'data2=abc;expires=' + expire.toUTCString();
-          elem.innerHTML = "<p style='color: red;'>ない</p>";
+          elem.innerHTML += "<p style='color: red;'>ない</p>";
         }
       }
 
