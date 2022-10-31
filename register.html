@@ -5,21 +5,46 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ショップジェネレーター Login</title>
 	<link rel="stylesheet" type="text/css" href="register.css">
+  <script>
+    function xmltest(){
+      const formdatas = document.getElementById("signupform").value;
+      const url = 'https://script.google.com/macros/s/AKfycbzm-l7rvjXUhTlT1niizoLcOM8XBqj-xLXzp01vuoUzCC8RKUR-w0GDPKSwSeuUfwCy/exec';
+      const postFetch = () => {let formData = new FormData(formdatas);
+        for (let value of formData.entries()) {
+          console.log(value);
+        }
+        fetch(url, {method: 'POST',body: formData}).then((response) => {
+          if(!response.ok) {
+            console.log('error!');
+          }console.log('ok!');
+          return response.json();
+        }
+        ).then((data)  => {
+          console.log(data);
+        }
+        ).catch((error) => {
+          console.log(error);
+        }
+        );
+      };
+    }
+  </script>
 </head>
 <body>
   <h1>アカウントを新規登録</h1>
 
 <div class="signup">
-    <form action="https://script.google.com/macros/s/AKfycbyo4LoBVr6GZh3Lf60CuulM8XbKyEsinJs7smIyEaIojGf588lK2MnytLIz8MEJ5dP9/exec" method="POST">
+    <form method="POST" id="signupform">
         <label for="signup-id">ユーザ名</label><br>
         <input id="signup-id" name="gamertag" type="text" placeholder="ゲーマータグを入力"><br>
         <label for="signup-mail">メールアドレス</label><br>
         <input id="signup-mail" name="mailaddress" type="email" placeholder="メールアドレスを入力"><br>
         <label for="signup-pass">パスワード</label><br>
         <input id="signup-pass" name="password" type="password" placeholder="パスワードを入力"><br>
-        <button name="signup" type="submit">登録する</button>
+        <button name="signup" onclick="xmltest()">登録する</button>
     </form>
 </div>
+<button onclick="xmltest()">XML-HTMLRequestをテストする</button>
 
 </body>
 </html>
