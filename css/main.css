@@ -5,6 +5,12 @@
   text-decoration: none;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   background-color: #333;
   padding: 1rem;
@@ -91,10 +97,28 @@ button.ham {
 main {
   padding: 1rem;
   text-align: center;
+  flex-grow: 1;
+}
+section.canvas {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
 }
 #canvas {
-  margin: 1rem;
   width: 100vmin;
+  max-width: calc(100vw - 4rem);
   height: 60vmin;
   background-color: #dddddd;
+}
+
+footer {
+  width: 100%;
+  background-color: #333;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  color: #f0f0f0;
 }
