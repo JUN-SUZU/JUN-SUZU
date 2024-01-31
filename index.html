@@ -1,19 +1,79 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="JUN-SUZUのホームページです。JUN-SUZUは、日本の学生プログラマーです。大半のアプリケーションを開発できます。" name="description">
+    <meta name="author" content="JUN-SUZU">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="JUN-SUZUのホームページ">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jun-suzu.net/">
+    <meta property="og:image" content="https://jun-suzu.net/img/ogp.png">
+    <meta property="og:site_name" content="JUN-SUZUのホームページ">
+    <meta property="og:description" content="JUN-SUZUのホームページです。JUN-SUZUは、日本の学生プログラマーです。大半のアプリケーションを開発できます。">
     <title>JUN-SUZUのホームページ</title>
+    <link rel="icon" href="./img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
     <header>
+        <h1>JUN SUZU</h1>
     </header>
+    <nav>
+        <button class="ham" id="hamBtn">
+            <ion-icon name="menu-outline"></ion-icon>
+        </button>
+        <div class="ham-menu" id="hamMenu">
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./about/">About</a></li>
+                <li><a href="./product/">Product</a></li>
+                <li><a href="./contact/">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
     <main>
+        <div class="whois">
+            <h2>Who am I?</h2>
+            <p>私は日本の学生プログラマー。アプリケーションの作成は得意で、いつでもどこでもどんなコードでも書けます。
+                新しいプロジェクトで一緒に仕事をしてみませんか？お互いに良い刺激を与えあいながら、素晴らしい経験ができるはずです。</p>
+        </div>
+        <div class="career">
+            <h2>Career</h2>
+            <div class="career-list">
+                <div class="career-item">
+                    <h3>2022/8/20</h3>
+                    <p>VBAプログラミングに出会う</p>
+                </div>
+                <div class="career-item">
+                    <h3>2022/9/21</h3>
+                    <p>プログラミングを始める</p>
+                </div>
+                <div class="career-item">
+                    <h3>2022/10/16</h3>
+                    <p>初めて自作の完全オリジナルアプリケーションAutoBackupを公開</p>
+                </div>
+                <div class="career-item">
+                    <h3>2022/10/30</h3>
+                    <p>マイクラ統合版のアドオンチャット禁止アドオンを公開</p>
+                </div>
+                <div class="career-item">
+                    <h3>2023/10/28</h3>
+                    <p>GreyHackのチートツールWaterSkeletonを公開</p>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
+        <p>© 2023 JUN-SUZU</p>
     </footer>
     <script src="./script/main.js"></script>
 </body>
+
 </html>
