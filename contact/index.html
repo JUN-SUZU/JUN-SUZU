@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | JUN-SUZU</title>
+    <link rel="stylesheet" type="text/css" href="../css/contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Contact</h1>
+    </header>
+    <main>
+        <div class="contact">
+            <h2>お問い合わせ</h2>
+            <p>お問い合わせは、以下のフォームからお願いします。</p>
+            <form action="https://app.jun-suzu.net/contact/" method="post">
+                <label for="name">お名前</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="お名前を入力してください" required>
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="メールアドレスを入力してください" required>
+                <label for="message">メッセージ</label>
+                <textarea id="message" name="message" autocomplete="off" placeholder="メッセージを入力してください" required></textarea>
+                <button type="button" onclick="send()">送信</button>
+                <div id="failed">
+                    <p>送信に失敗しました。</p>
+                </div>
+                <div id="success">
+                    <p>送信しました。</p>
+                </div>
+            </form>
+    </main>
+    <footer>
+    </footer>
+    <script src="../script/contact.js"></script>
+</body>
+</html>
