@@ -33,7 +33,7 @@ function send() {
                     document.getElementById("success").style.display = "none";
                 }, 8000);
             } else {
-
+                error();
             }
         })
         .catch(error());
