@@ -5,23 +5,32 @@ body {
 }
 
 header {
+  background-color: #333;
+  text-align: center;
+  padding: 1rem;
+}
+header h1 {
+  font-size: 50px;
+  color: black;
+  text-shadow: 0 0 20px #e0e0e0;
+}
+
+.intro {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 2rem;
 }
-header h1 {
+.intro h1 {
   font-size: 50px;
   color: black;
   text-shadow: 0 0 50px #e0e0e0;
   margin: 1rem;
 }
-header img {
+.intro img {
   margin: 1rem;
 }
-header .author__icon {
+.intro .author__icon {
   width: 120px;
   height: 120px;
   -o-object-fit: cover;
@@ -29,7 +38,7 @@ header .author__icon {
   border-radius: 50%;
   border: 2px solid #f0f0f0;
 }
-header .author__face {
+.intro .author__face {
   display: none;
 }
 

@@ -3,13 +3,22 @@ body {
   min-height: 100vh;
   height: 100%;
 }
+
 header {
+  background-color: #333;
+  text-align: center;
+  padding: 1rem;
+  h1 {
+    font-size: 50px;
+    color: black;
+    text-shadow: 0 0 20px #e0e0e0;
+  }
+}
+.intro {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 2rem;
   h1 {
     font-size: 50px;
     color: black;

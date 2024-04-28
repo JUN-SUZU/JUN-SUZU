@@ -20,10 +20,12 @@ body {
     article a {
       width: min-content;
       background-color: #f0f0f0;
-      border: 1px solid #333;
+      @media screen and (min-width: 769px) {
+        border: 1px solid #333;
+      }
       border-radius: 15px;
-      margin: .5rem;
-      transition: transform 1s, filter .8s;
+      margin: 0.5rem;
+      transition: transform 1s, filter 0.8s;
       div {
         width: 300px;
         max-width: calc(100vw - 4rem);
