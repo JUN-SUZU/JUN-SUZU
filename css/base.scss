@@ -11,6 +11,10 @@ nav {
   );
   padding: 1rem;
   text-align: center;
+  // y座標の最小値を0にする
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 button.ham {
