@@ -1,0 +1,6 @@
+Primary Color (#000000): For main text and headings.
+Secondary Color (#464646): For secondary text, borders, or less important elements.
+Accent Color 1 (#6ad5f3): For buttons, links, or highlights.
+Accent Color 2 (#10a7cd): For buttons, icons, or other interactive elements.
+Background Color (#dfebee): For the background of your webpage to keep it light and easy on the eyes.
+Complementary Color (#6e7a7e): For any additional elements or subtle highlights to add depth.
