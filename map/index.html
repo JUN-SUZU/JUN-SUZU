@@ -18,7 +18,7 @@
     <title>JUN-SUZU</title>
     <link rel="stylesheet" type="text/css" href="/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/contact.css">
+    <link rel="stylesheet" type="text/css" href="/css/map.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
@@ -30,27 +30,16 @@
         </a>
     </header>
     <main>
-        <div class="contact">
-            <h2>お問い合わせ</h2>
-            <p>お問い合わせは、以下のフォームからお願いします。</p>
-            <form action="https://app.jun-suzu.net/contact/" method="post">
-                <label for="name">お名前</label>
-                <input type="text" id="name" name="name" autocomplete="name" placeholder="お名前を入力してください" required>
-                <label for="email">メールアドレス</label>
-                <input type="email" id="email" name="email" autocomplete="email" placeholder="メールアドレスを入力してください"
-                    required>
-                <label for="message">メッセージ</label>
-                <textarea id="message" name="message" autocomplete="off" placeholder="メッセージを入力してください"
-                    required></textarea>
-                <button type="button" onclick="send()">送信</button>
-                <div id="failed">
-                    <p>送信に失敗しました。</p>
-                </div>
-                <div id="success">
-                    <p>送信しました。</p>
-                </div>
-            </form>
-        </div>
+        <section>
+            <h2>サイトマップ</h2>
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/product/">製品</a></li>
+                <li><a href="/contact/">お問い合わせ</a></li>
+                <li><a href="/map/">サイトマップ</a></li>
+                <li><a href="/donate/">寄付</a></li>
+            </ul>
+        </section>
     </main>
     <footer>
         <div class="foot__container">
