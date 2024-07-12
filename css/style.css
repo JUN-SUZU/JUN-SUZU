@@ -70,17 +70,14 @@
   transform: scale(1.02);
 }
 .qiita__post__container .panel__qiita__container .qiita_tag::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f02b";
-  -webkit-font-smoothing: antialiased;
+  content: "  ";
   display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
   line-height: 1;
-  padding-right: 0.1em;
-  font: var(--fa-font-solid);
-  color: #ffffff;
+  margin-right: 0.1em;
+  background-image: url(/assets/img/tag-solid.svg);
+  background-size: cover;
+  width: 0.9em;
+  height: 0.9em;
 }
 @media screen and (max-width: 768px) {
   .qiita__post__container .panel__qiita__container {

@@ -70,17 +70,14 @@ $color: #6ad5f3;
       }
     }
     .qiita_tag::before {
-      font-family: "Font Awesome 5 Free";
-      content: "\f02b";
-      -webkit-font-smoothing: antialiased;
+      content: "  ";
       display: inline-block;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
       line-height: 1;
-      padding-right: 0.1em;
-      font: var(--fa-font-solid);
-      color: #ffffff;
+      margin-right: .1em;
+      background-image: url(/assets/img/tag-solid.svg);
+      background-size: cover;
+      width: .9em;
+      height: .9em;
     }
     @media screen and (max-width: 768px) {
       width: calc(100% - 1rem);
