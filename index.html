@@ -18,81 +18,135 @@
     <title>JUN-SUZU</title>
     <link rel="stylesheet" type="text/css" href="/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
     <header>
+        <a href="/" class="logo">
+            <h1>JUN-SUZU</h1>
+        </a>
     </header>
     <main>
-        <div class="hidden__text__accessibility">
-            <p>ナビゲーション</p>
-            <a href="/" alt="ホーム画面へ移動">ホーム</a>
-            <a href="/works/" alt="制作物一覧画面へ移動">制作物</a>
-            <a href="/links/" alt="リンク集画面へ移動">リンク集</a>
-            <a href="/donate/" alt="寄付を贈る画面へ移動">寄付</a>
-            <a href="/contact/" alt="お問い合わせ画面へ移動">お問い合わせ</a>
-        </div>
-        <section>
-            <article id="hero">
-                <h1 id="heroCaption">全ての人々に、情報技術への道を</h1>
-                <div class="sentence">
-                    <p>このホームページページは、障がいを持つ人々を含め全ての人々がご利用しやすいようにアクセシビリティに配慮して設計されています。</p>
-                    <p>私は、情報技術を学び、活用することで、障がいの有無に関わらず、全ての人々が自分の可能性を広げることができる社会を目指しています。</p>
-                    <p>私の制作物やリンク集を通じて、情報技術への理解を深め、自分の可能性を広げる一助となれば幸いです。</p>
-                    <p>ご利用いただいている皆様からのご感想やご意見をお待ちしております。</p>
+        <section class="hero">
+            <h1>全ての人々に、情報技術への道を</h1>
+            <p>私は、日本の学生プログラマーです。色んなアプリケーションを開発できます。</p>
+            <p>このホームページでは、障がいを持つ人々を含む全ての人々がアクセスしやすいように、アクセシビリティに配慮しています。</p>
+            <p>実際にご利用なさった方々からのフィードバックをお待ちしています。</p>
+        </section>
+        <section class="about">
+            <h2>私について</h2>
+            <p>私は、日本の学生プログラマーです。色んなアプリケーションを開発できます。</p>
+            <p>過去に開発してきた製品は、<a href="/product/">製品一覧</a>からご覧いただけます。</p>
+            <ul>
+                <li>名前：JUN-SUZU</li>
+                <li>生年月日：2006年10月8日</li>
+                <li>出身地：日本</li>
+                <li>所属：兵庫県立龍野高等学校</li>
+                <li>趣味：プログラミング、PCいじり、ゲーム、アニメ鑑賞、スキー</li>
+            </ul>
+        </section>
+        <section class="latest-projects">
+            <h2>最新のプロジェクト</h2>
+            <div class="project">
+                <h3>KOKONE</h3>
+                <p>Discord音楽BOTの「KOKONE」は、音楽の再生や検索ができるBOTです。</p>
+                <a href="https://kokone.jun-suzu.net">詳細を見る</a>
+            </div>
+            <div class="project">
+                <h3>MIRAI</h3>
+                <p>Discord認証BOTの「MIRAI」は、VPNや国外IPアドレスを検知できるBOTです。</p>
+                <a href="https://mirai.jun-suzu.net">詳細を見る</a>
+            </div>
+        </section>
+        <section class="sns">
+            <h2>snsアカウントと活動ログ</h2>
+            <div class="place__holder">
+                <div class="panel__sns">
+                    <a href="https://github.com/JUN-SUZU" class="sns__container__header">
+                        <h3>GitHub</h3>
+                        <img src="/assets/img/github-mark-white.svg" alt="GitHub" class="sns__container__header__img">
+                        <h3>JUN-SUZU</h3>
+                    </a>
+                    <img src="https://github-profile-trophy.vercel.app/?username=jun-suzu" alt="jun-suzu"
+                        class="github__profile__img" />
+                    <img src="https://github-readme-stats.vercel.app/api?username=jun-suzu&show_icons=true&locale=en"
+                        alt="jun-suzu" class="github__profile__img" />
                 </div>
-            </article>
-            <article id="whoamI">
-                <h1 id="whoamICaption">JUN-SUZU</h1>
-                <div class="sentence">
-                    <p>私は、日本の高校生プログラマーです。</p>
-                    <p>様々な分野のアプリケーション開発経験があり、サーバーインフラからOS・ミドルウェア・フロントエンドまで幅広く対応できます。</p>
-                    <p>また、Webデザインやデータベース設計、サーバー運営なども行っています。</p>
-                    <p>私の制作物やリンク集を通じて、情報技術への理解を深め、自分の可能性を広げる一助となれば幸いです。</p>
+                <div class="panel__sns">
+                    <a href="https://qiita.com/JUN-SUZU" class="sns__container__header">
+                        <h3>Qiita</h3>
+                        <img src="/assets/img/qiita-icon.png" alt="Qiita" class="sns__container__header__img">
+                        <h3>JUN-SUZU</h3>
+                    </a>
+                    <section class="qiita__profile" id="qiita__profile">
+                        <p id="qiitaDescription"></p>
+                        <div>
+                            <a href="https://qiita.com/JUN-SUZU/followers" class="qiita__profile__link"><span
+                                    id="qiitaFollowers"></span><br>フォロワー</a>
+                            <a href="https://qiita.com/JUN-SUZU/following_users" class="qiita__profile__link"><span
+                                    id="qiitaFollowees"></span><br>フォロー中</a>
+                            <a href="https://qiita.com/JUN-SUZU/items" class="qiita__profile__link"><span
+                                    id="qiitaItems"></span><br>投稿</a>
+                        </div>
+                    </section>
+                    <div class="qiita__post__container" id="qiita__post__container">
+
+                    </div>
                 </div>
-            </article>
-            <article id="profile">
-                <h1 id="profileCaption">プロフィール</h1>
-                <div class="sentence">
-                    <p>Name : JUN-SUZU</p>
-                    <p>Birthday : 2006年10月8日</p>
-                    <p>Location : 日本</p>
-                    <p>Language : 日本語</p>
-                    <p>Hobby&Favorite : プログラミング、PCいじり、アニメ鑑賞、スキー</p>
+                <div class="panel__sns">
+                    <a href="https://www.youtube.com/@JUN-SUZU/featured" class="sns__container__header">
+                        <h3>YouTube</h3>
+                        <img src="/assets/img/youtube.png" alt="YouTube" class="sns__container__header__img">
+                        <h3>JUN-SUZU</h3>
+                    </a>
+                    <div class="youtube__profile">
+                        <p><ion-icon name="person-outline"></ion-icon> チャンネル登録者数 267人</p>
+                        <p><ion-icon name="play-outline"></ion-icon> 22 本の動画</p>
+                        <p><ion-icon name="trending-up-outline"></ion-icon> 83,923 回視聴</p>
+                        <p><ion-icon name="information-circle-outline"></ion-icon> 2020/02/11 に登録</p>
+                        <p><ion-icon name="earth-outline"></ion-icon> 日本</p>
+                    </div>
                 </div>
-            </article>
+                <div class="panel__sns">
+                    <a href="https://discord.com/users/704668240030466088" class="sns__container__header">
+                        <h3>Discord</h3>
+                        <img src="/assets/img/discord.svg" alt="Discord" class="sns__container__header__img">
+                        <h3>junsuzu</h3>
+                    </a>
+                    <div class="badge__discord" id="badge__discord">
+                        <img src="https://cdn.discordapp.com/badge-icons/011940fd013da3f7fb926e4a1cd2e618.png"
+                            alt="HypeSquad Brilliance" title="HypeSquad Brilliance">
+                        <img src="https://cdn.discordapp.com/badge-icons/6bdc42827a38498929a4920da12695d9.png"
+                            alt="アクティブデベロッパー" title="アクティブデベロッパー">
+                        <img src="https://cdn.discordapp.com/badge-icons/2ba85e8026a8614b640c2837bcdfe21b.png"
+                            alt="Nitro" title="Nitro 2022/11/25からの登録者">
+                        <img src="https://cdn.discordapp.com/badge-icons/996b3e870e8a22ce519b3a50e6bdd52f.png"
+                            alt="サーバーブースト" title="サーバーブースト 2023/09/18からのブースター">
+                        <img src="https://cdn.discordapp.com/badge-icons/6de6d34650760ba5551a79732e98ed60.png"
+                            alt="かつての名：JUN SUZU#0507" title="かつての名：JUN SUZU#0507">
+                        <img src="https://cdn.discordapp.com/badge-icons/7d9ae358c8c5e118768335dbe68b4fb8.png"
+                            alt="クエストをクリアしました" title="クエストをクリアしました">
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <nav>
-        <ul>
-            <li><a href="/"><img src="/assets/img/md-home.svg" alt="HomeIconLooksLikeHouse"
-                        class="inline__icon">Home</a></li>
-            <li><a href="/works/"><img src="/assets/img/md-appstore.svg" alt="AppStoreIconLooksLikeBag"
-                        class="inline__icon">Works</a></li>
-            <li><a href="/links/"><img src="/assets/img/md-link.svg" alt="LinkIconLooksLikeChain"
-                        class="inline__icon">Links</a></li>
-            <li><a href="/donate/"><img src="/assets/img/md-heart.svg" alt="HeartIconLooksLikeHeart"
-                        class="inline__icon">Donate</a></li>
-            <li><a href="/contact/"><img src="/assets/img/md-contact.svg" alt="ContactIconLooksLikeHumanShape"
-                        class="inline__icon">Contact</a></li>
-        </ul>
-    </nav>
     <footer>
-        <p class="cpr">© 2024 JUN-SUZU</p>
+        <div class="foot__container">
+            <a href="/product/">製品</a>
+            <a href="/contact/">お問い合わせ</a>
+            <a href="/map/">サイトマップ</a>
+            <a href="/donate/">寄付</a>
+        </div>
+        <a href="/" class="logo">
+            <h1>JUN-SUZU</h1>
+        </a>
+        <p>© 2024 JUN-SUZU</p>
     </footer>
-    <script>
-        // active__hover__caption
-        document.getElementById('heroCaption').addEventListener('mouseover', function () {
-            document.getElementById('heroCaption').classList.add('active__hover__caption');
-        });
-        document.getElementById('whoamICaption').addEventListener('mouseover', function () {
-            document.getElementById('whoamICaption').classList.add('active__hover__caption');
-        });
-        document.getElementById('profileCaption').addEventListener('mouseover', function () {
-            document.getElementById('profileCaption').classList.add('active__hover__caption');
-        });
-    </script>
+    <script src="/script/main.js"></script>
 </body>
 
 </html>

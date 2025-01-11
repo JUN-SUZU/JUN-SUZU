@@ -1,0 +1,86 @@
+.place__holder {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.place__holder .panel__sns {
+  flex-grow: 1;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.place__holder .panel__sns a.sns__container__header {
+  display: inline-flex;
+  margin: 1rem auto;
+  max-width: 600px;
+  padding: 0.5rem;
+  justify-content: center;
+  border: #dfebee solid 1px;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+.place__holder .panel__sns a.sns__container__header:hover {
+  filter: brightness(1.1);
+  transform: scale(1.1);
+}
+.place__holder .panel__sns a.sns__container__header .sns__container__header__img {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.5rem;
+}
+.place__holder .panel__sns a.sns__container__header h3 {
+  font-size: 1.5rem;
+  color: white;
+}
+.place__holder .panel__sns .github__profile__img {
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 100%;
+}
+.place__holder .panel__sns .badge__discord img {
+  width: 2rem;
+}
+.place__holder .panel__sns .youtube__profile {
+  text-align: left;
+}
+
+.qiita__post__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.qiita__post__container .panel__qiita__container {
+  flex-grow: 1;
+  margin: 0.5rem;
+  padding: 1rem;
+  width: calc(50% - 1rem);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px #55c500;
+}
+.qiita__post__container .panel__qiita__container a {
+  color: white;
+  transition: transform 0.3s;
+}
+.qiita__post__container .panel__qiita__container a:hover {
+  text-decoration: underline;
+  transform: scale(1.02);
+}
+.qiita__post__container .panel__qiita__container .qiita_tag::before {
+  content: "  ";
+  display: inline-block;
+  line-height: 1;
+  margin-right: 0.1em;
+  background-image: url(/assets/img/tag-solid.svg);
+  background-size: cover;
+  width: 0.9em;
+  height: 0.9em;
+}
+@media screen and (max-width: 768px) {
+  .qiita__post__container .panel__qiita__container {
+    width: calc(100% - 1rem);
+  }
+}
