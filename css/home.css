@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "kachou_fuugetsu";
+  src: url("/assets/fonts/kachoufuugetu.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gen no Kaku Gothic Regular";
+  src: url("/assets/fonts/SourceHanSansJP-Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "Gen no Kaku Gothic Bold";
+  src: url("/assets/fonts/SourceHanSansJP-Bold.otf") format("truetype");
+}
+main section {
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  main section {
+    padding-inline: 2rem;
+  }
+}
+main section article {
+  width: 100%;
+  margin-block: 2rem;
+  background-image: linear-gradient(to right, #333, #333);
+  background-size: 300px 2px;
+  padding-bottom: 0.2em;
+  background-repeat: no-repeat;
+}
+main section article h1 {
+  font-size: 2rem;
+  font-family: "Gen no Kaku Gothic Bold", sans-serif;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-image: linear-gradient(to right, rgba(39, 132, 203, 0.3254901961), rgba(73, 169, 242, 0.6352941176));
+  background-size: 0 100%;
+  background-position: -100% -100%;
+  background-repeat: no-repeat;
+  transition: background-position 0.3s ease-out, background-size 0.3s ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+main section article h1.active__hover__caption {
+  background-size: 100% 100%;
+  background-position: 0 0;
+}
+@media screen and (min-width: 768px) {
+  main section article h1 {
+    font-size: max(2rem, 3vw);
+  }
+}
+main section article .sentence {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Yu Gothic", "Meiryo", "Hiragino Kaku Gothic Pro", "Noto Sans JP", sans-serif;
+}
+main section article#hero {
+  text-align: left;
+  background-position: bottom left;
+}
+main section article#whoamI {
+  text-align: right;
+  background-position: bottom right;
+}
+main section article#whoamI h1 {
+  margin-inline: auto 0;
+}
+main section article#profile {
+  text-align: left;
+  background-position: bottom left;
+}
+
+nav ul :nth-child(1) a {
+  color: black;
+  font-size: 1.2em;
+  filter: brightness(0.8);
+}
