@@ -1,0 +1,141 @@
+// styles.scss
+@font-face {
+    font-family: "misaki_gothic";
+    src: url("/assets/fonts/misaki_gothic.ttf") format("truetype");
+}
+body {
+    background-color: #1a202c; // bg-gray-900
+    color: white; // text-white
+    font-family: "misaki_gothic", sans-serif;
+}
+.title__text {
+    font-size: 2rem;
+    margin: 1rem auto;
+    font-family: "Gen no Kaku Gothic Bold", sans-serif;
+    width: fit-content;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-image: linear-gradient(to right, #2784cb53, #49a9f2a2);
+    background-repeat: no-repeat;
+    transition:
+        background-position 0.3s ease-out,
+        background-size 0.3s ease-out;
+    user-select: none;
+    animation: title__text__load 1s ease-out;
+    @media screen and (min-width: 768px) {
+        font-size: max(2rem, 3vw);
+    }
+    @keyframes title__text__load {
+        0% {
+            background-size: 0 100%;
+            background-position: -100% -100%;
+        }
+        100% {
+            background-size: 100% 100%;
+            background-position: 0 0;
+        }
+    }
+}
+p {
+    font-size: 1.25rem; // text-xl
+    margin-top: 0.5rem; // mt-2
+}
+.container {
+    margin: 0 auto;
+    padding: 1rem;
+    @media screen and (min-width: 768px) {
+        padding-inline: 2rem;
+    }
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); // grid-cols-1
+    gap: 2rem; // gap-8
+    @media (min-width: 768px) {
+        // md
+        grid-template-columns: repeat(2, 1fr); // md:grid-cols-2
+    }
+    @media (min-width: 1024px) {
+        // lg
+        grid-template-columns: repeat(3, 1fr); // lg:grid-cols-3
+    }
+}
+.card {
+    background-color: #2d3748; // bg-gray-800
+    padding: 1rem; // p-4
+    border-radius: 0.5rem; // rounded-lg
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // shadow-lg
+    text-align: center;
+    .card__image__container {
+        position: relative;
+        width: 300px; // w-48
+        height: 200px; // h-48
+        margin: 0 auto 1rem; // mx-auto mb-4
+        margin-bottom: 1rem; // mb-4
+        .card__image__cover {
+            width: 300px; // w-48
+            height: 200px;
+            position: absolute;
+            border-radius: 0.5rem; // rounded-lg
+            &.kokone__cardname {
+                background:
+                    radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(255, 32, 125, 0.3)),
+                    no-repeat center center;
+            }
+            &.mirai__cardname {
+                background:
+                    radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(127, 255, 210, 0.6)),
+                    no-repeat center center;
+            }
+            &.iw__cardname {
+                background:
+                    radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(251, 196, 131, 0.3)),
+                    no-repeat center center;
+            }
+            &.ab__cardname {
+                background:
+                    radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(0, 191, 255, 0.3)),
+                    no-repeat center center;
+            }
+            &.youtube__cardname {
+                background:
+                    radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(255, 0, 0, 0.1)),
+                    no-repeat center center;
+            }
+            &.x__cardname {
+                background:
+                    radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(29, 161, 242, 0.3)),
+                    no-repeat center center;
+            }
+        }
+        .card__image {
+            width: 300px; // w-48
+            height: 200px; // h-48
+            object-fit: cover;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // shadow-md
+            border-radius: 0.5rem; // rounded-lg
+        }
+    }
+}
+.card h2 {
+    font-size: 1.5rem; // text-2xl
+    margin-bottom: 0.5rem; // mb-2
+}
+.card p {
+    margin-bottom: 1rem; // mb-4
+}
+.button {
+    background-color: #4299e1; // bg-blue-500
+    color: white; // text-white
+    font-weight: bold; // font-bold
+    padding: 0.5rem 1rem; // py-2 px-4
+    border-radius: 0.25rem; // rounded
+    &:hover {
+        background-color: #3182ce; // hover:bg-blue-700
+    }
+}
+nav ul :nth-child(3) a {
+    color: black;
+    font-size: 1.2em;
+    filter: brightness(0.8);
+}
