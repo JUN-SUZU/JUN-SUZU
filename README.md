@@ -3,6 +3,8 @@
 Welcome to my GitHub profile! I'm a high school student from Japan, passionate about **computer science** and **programming**.
 I love exploring new technologies and building cool projects.
 
+![Profile Image](./adult_prits_upper.png)
+
 ## 🚀 About Me
 
 - 💻 Coding in: C#, Python, JavaScript, Java, C++, Kotlin, and more
@@ -25,7 +27,7 @@ Check out some of my repositories where I experiment with different technologies
 
 I'm always open to collaborating on interesting projects or just having a chat about technology! Feel free to reach out:
 
-- 🔗 [My Website](https://jun-suzu.net/)
+- 🔗 [My Website jun-suzu.net](https://jun-suzu.net/)
 - 🐦 Twitter: [@JUN-SUZU0507](https://x.com/JUNSUZU0507)
 - 📧 Email: jun at jun-suzu.net
 
