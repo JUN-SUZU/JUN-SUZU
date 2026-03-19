@@ -21,7 +21,7 @@ Check out some of my repositories where I experiment with different technologies
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=JUN-SUZU&show_icons=true&theme=tokyonight)
 
-![GitHub Torophies](https://github-profile-trophy.vercel.app/?username=jun-suzu)
+![GitHub Torophies](https://github-profile-trophy-orcin-nine.vercel.app/?username=jun-suzu)
 
 ## 🌎 Connect with Me
 
