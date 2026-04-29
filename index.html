@@ -75,25 +75,61 @@
                 <h1 id="profileCaption">プロフィール</h1>
                 <div class="statement">
                     <h2>基本情報</h2>
-                    <p>Name : JUN-SUZU</p>
-                    <p>Occupation : フルスタックエンジニア、自宅サーバー運用者</p>
-                    <p>Experience : 5年以上のプログラミング経験(C++, Node.js 等)、複数のプロジェクトでの実績</p>
-                    <p>Education : 筑波大学情報科学類在学中 ITF.Coins.26</p>
-                    <p>Birthday : 2006年10月8日</p>
-                    <p>Location : 日本</p>
-                    <p>Language : 日本語</p>
-                    <p>Hobby&Favorite : プログラミング、PCいじり、アニメ鑑賞、スキー</p>
+                    <dl class="profile-grid">
+                        <dt>Name</dt>
+                        <dd>JUN-SUZU</dd>
+                        <dt>Occupation</dt>
+                        <dd>フルスタックエンジニア、自宅サーバー運用者</dd>
+                        <dt>Experience</dt>
+                        <dd>5年以上のプログラミング経験(C++, Node.js 等)、複数のプロジェクトでの実績</dd>
+                        <dt>Education</dt>
+                        <dd>筑波大学情報科学類在学中 ITF.Coins.26</dd>
+                        <dt>Birthday</dt>
+                        <dd>2006年10月8日</dd>
+                        <dt>Location</dt>
+                        <dd>日本</dd>
+                        <dt>Language</dt>
+                        <dd>日本語</dd>
+                        <dt>Hobby / Favorite</dt>
+                        <dd>プログラミング、PCいじり、アニメ鑑賞、スキー</dd>
+                    </dl>
                 </div>
                 <div class="skills">
                     <h2>スキルセット</h2>
-                    <ul>
-                        <li><strong>Languages:</strong> JavaScript, Rust, C++, C#, Java</li>
-                        <li><strong>Frameworks:</strong> Express.js (Node.js runtime)</li>
-                        <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Redis (KVS, Pub/Sub)</li>
-                        <li><strong>Messaging / IPC:</strong> NATS JetStream, Unix Domain Socket (High-performance IPC)</li>
-                        <li><strong>Infrastructure:</strong> Proxmox (Self-hosted Lab), LXC</li>
-                        <li><strong>R&D / Re-invention (車輪の再発明):</strong>
-                            <ul>
+                    <ul class="skill-categories">
+                        <li>
+                            <strong>Languages:</strong>
+                            <div class="skill-badges">
+                                <span>JavaScript</span><span>Rust</span><span>C++</span><span>C#</span><span>Java</span>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Frameworks:</strong>
+                            <div class="skill-badges">
+                                <span>Express.js</span>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Databases:</strong>
+                            <div class="skill-badges">
+                                <span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Messaging / IPC:</strong>
+                            <div class="skill-badges">
+                                <span>NATS JetStream</span><span>Unix Domain Socket</span>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Infrastructure:</strong>
+                            <div class="skill-badges">
+                                <span>Proxmox</span><span>LXC</span>
+                            </div>
+                        </li>
+                        <li class="rnd-section">
+                            <strong>R&D / Re-invention (車輪の再発明):</strong>
+                            <ul class="sub-list">
                                 <li><strong>monitorob:</strong> 自作のプロセス管理ツール（スーパーバイザー）をC++でスクラッチ実装</li>
                                 <li><strong>Iroha AI:</strong> 自作AIを開発中(形態素解析をC++ネイティブコードでスクラッチ実装済み)</li>
                             </ul>

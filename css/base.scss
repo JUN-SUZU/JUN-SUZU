@@ -1,3 +1,28 @@
+// ==========================================
+// Variables
+// ==========================================
+$color-primary: #0b7285;
+$color-primary-dark: #062c31;
+$color-accent: #1e3a8a;
+$color-accent-dark: #1e40af;
+$color-text-main: #0f172a;
+$color-text-muted: rgba(15, 23, 42, 0.68);
+$color-text-muted-dark: rgba(15, 23, 42, 0.8);
+$color-bg-light: #f6f8fb;
+$color-white: #fff;
+$color-white-transparent: rgba(255, 255, 255, 0.9);
+$color-bg-transparent: rgba(255, 255, 255, 0.88);
+$border-radius-card: 18px;
+$border-radius-input: 12px;
+$border-radius-pill: 999px;
+$shadow-card: 0 1rem 2.5rem rgba(15, 23, 42, 0.08);
+$shadow-btn: 0 0.6rem 1.6rem rgba(30, 58, 138, 0.24);
+$shadow-btn-hover: 0 0.8rem 2rem rgba(30, 58, 138, 0.32);
+$shadow-btn-active: 0 0.4rem 1rem rgba(30, 58, 138, 0.2);
+$transition-default: 0.18s ease;
+// ==========================================
+// Base Styles
+// ==========================================
 .inline__icon {
     display: inline-block;
     vertical-align: middle;
@@ -6,7 +31,6 @@
     width: 1.1em;
     height: 1.1em;
 }
-
 .hidden__text__accessibility {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
@@ -18,26 +42,21 @@
     overflow: hidden;
     white-space: nowrap;
 }
-
 a {
-    color: #0b7285;
+    color: $color-primary;
     text-decoration: none;
 }
-
 body {
-    color: #0f172a;
+    color: $color-text-main;
     background:
         radial-gradient(circle at top left, rgba(11, 114, 133, 0.08), transparent 36%),
-        radial-gradient(circle at top right, rgba(14, 165, 233, 0.08), transparent 28%),
-        #f6f8fb;
+        radial-gradient(circle at top right, rgba(14, 165, 233, 0.08), transparent 28%), $color-bg-light;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
     main {
         flex-grow: 1;
     }
-
     nav {
         position: sticky;
         bottom: 0;
@@ -45,11 +64,11 @@ body {
         justify-content: center;
         margin: 1rem 0 1.25rem;
         padding-inline: 1rem;
-
+        z-index: 1000;
         ul {
             width: 100%;
             max-width: 900px;
-            background: rgba(255, 255, 255, 0.88);
+            background: $color-bg-transparent;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -57,12 +76,27 @@ body {
             gap: 0.5rem;
             padding: 0.75rem;
             border: 1px solid rgba(15, 23, 42, 0.08);
-            border-radius: 18px;
-            box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.08);
-
+            border-radius: $border-radius-card;
+            box-shadow: $shadow-card;
+            transition:
+                transform 0.3s ease,
+                opacity 0.3s ease;
+            // スマホ用ナビゲーションの開閉アニメーション対応
+            @media screen and (max-width: 767px) {
+                transform: translateY(150%);
+                opacity: 0;
+                pointer-events: none;
+                position: absolute;
+                bottom: 100%;
+                margin-bottom: 1rem;
+                &.open {
+                    transform: translateY(0);
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+            }
             li {
                 display: inline-block;
-
                 a {
                     font-weight: 700;
                     color: #1f2937;
@@ -70,16 +104,17 @@ body {
                     align-items: center;
                     gap: 0.45rem;
                     padding: 0.6rem 0.85rem;
-                    border-radius: 999px;
-                    transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+                    border-radius: $border-radius-pill;
+                    transition:
+                        transform $transition-default,
+                        background-color $transition-default,
+                        color $transition-default;
                     user-select: none;
-
                     &:hover {
-                        color: #062c31;
+                        color: $color-primary-dark;
                         transform: translateY(-2px);
                         background: rgba(11, 114, 133, 0.08);
                     }
-
                     &:active {
                         transform: translateY(0);
                     }
@@ -87,7 +122,6 @@ body {
             }
         }
     }
-
     footer {
         .cpr {
             text-align: center;
@@ -97,198 +131,189 @@ body {
         }
     }
 }
-
+// ==========================================
+// Components
+// ==========================================
 .container {
     width: 100%;
     max-width: 1120px;
     margin: 0 auto;
     padding: 0 1rem;
 }
-
 .logo {
-    color: #062c31;
+    color: $color-primary-dark;
     font-weight: 800;
     letter-spacing: 0.04em;
 }
-
 .menu-toggle {
     border: 0;
     background: transparent;
-    color: #062c31;
-    font-size: 1.5rem;
+    color: $color-primary-dark;
+    font-size: 1.8rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+    &:hover {
+        background-color: rgba(11, 114, 133, 0.1);
+    }
 }
-
 .muted {
-    color: rgba(15, 23, 42, 0.68);
+    color: $color-text-muted;
 }
-
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.7rem 1rem;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #1e3a8a, #1e40af);
-    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: $border-radius-pill;
+    background: linear-gradient(135deg, $color-accent, $color-accent-dark);
+    color: $color-white;
     text-decoration: none;
     border: 0;
-    box-shadow: 0 0.6rem 1.6rem rgba(30, 58, 138, 0.24);
+    box-shadow: $shadow-btn;
     font-weight: 600;
     transition: all 0.2s ease;
     cursor: pointer;
-
     &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 0.8rem 2rem rgba(30, 58, 138, 0.32);
+        box-shadow: $shadow-btn-hover;
+        color: $color-white;
     }
-
     &:active {
         transform: translateY(0);
-        box-shadow: 0 0.4rem 1rem rgba(30, 58, 138, 0.2);
+        box-shadow: $shadow-btn-active;
+    }
+    &.ghost {
+        background: transparent;
+        border: 2px solid $color-accent;
+        color: $color-accent;
+        box-shadow: none;
+        &:hover {
+            background: rgba(30, 58, 138, 0.08);
+            transform: translateY(-2px);
+        }
+        &:active {
+            transform: translateY(0);
+            background: rgba(30, 58, 138, 0.04);
+        }
     }
 }
-
-.btn.ghost {
-    background: transparent;
-    border: 2px solid #1e3a8a;
-    color: #1e3a8a;
-    box-shadow: none;
-    transition: all 0.2s ease;
-
-    &:hover {
-        background: rgba(30, 58, 138, 0.08);
-        transform: translateY(-2px);
-    }
-
-    &:active {
-        transform: translateY(0);
-        background: rgba(30, 58, 138, 0.04);
-    }
-}
-
+// ==========================================
+// Forms & Cards
+// ==========================================
 .form-notice {
     margin-top: 1rem;
-    color: #0b7285;
+    color: $color-primary;
 }
-
 .notice-ok {
     color: #0f766e;
 }
-
 .contact-section {
     padding: 3rem 1rem 4rem;
     max-width: 760px;
-
     h1 {
         font-size: clamp(2rem, 5vw, 3rem);
         margin-bottom: 0.75rem;
-        color: #062c31;
+        color: $color-primary-dark;
     }
 }
-
 .donate-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     margin: 2rem 0;
 }
-
 .donate-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: $color-white-transparent;
     border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 18px;
+    border-radius: $border-radius-card;
     padding: 1.5rem;
-    box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.08);
+    box-shadow: $shadow-card;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
     h2 {
         font-size: 1.35rem;
-        color: #062c31;
+        color: $color-primary-dark;
         font-weight: 700;
     }
-
     p {
-        color: rgba(15, 23, 42, 0.8);
+        color: $color-text-muted-dark;
         line-height: 1.7;
         flex: 1;
     }
-
     .btn {
         align-self: flex-start;
     }
 }
-
 .donate-info {
     margin-top: 2rem;
     background: rgba(30, 58, 138, 0.08);
-    border-left: 4px solid #1e3a8a;
+    border-left: 4px solid $color-accent;
     padding: 1.5rem;
-    border-radius: 12px;
-
+    border-radius: $border-radius-input;
     h2 {
-        color: #062c31;
+        color: $color-primary-dark;
         margin-bottom: 1rem;
     }
-
     ul {
         list-style-position: inside;
-        color: rgba(15, 23, 42, 0.8);
+        color: $color-text-muted-dark;
         line-height: 2;
     }
-
     p {
-        color: rgba(15, 23, 42, 0.8);
+        color: $color-text-muted-dark;
         line-height: 1.7;
         margin: 1rem 0;
     }
 }
-
 .contact-form {
     margin-top: 1.5rem;
     display: grid;
     gap: 1rem;
-    background: rgba(255, 255, 255, 0.9);
+    background: $color-white-transparent;
     border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 18px;
+    border-radius: $border-radius-card;
     padding: 1.25rem;
-    box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.08);
-
+    box-shadow: $shadow-card;
     label {
         display: grid;
         gap: 0.45rem;
         font-weight: 600;
         color: #12343b;
     }
-
     input,
     textarea {
         width: 100%;
         border: 1px solid rgba(15, 23, 42, 0.15);
-        border-radius: 12px;
+        border-radius: $border-radius-input;
         padding: 0.9rem 1rem;
         background: #fcfdff;
-        color: #0f172a;
+        color: $color-text-main;
         font: inherit;
-        transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
-
+        transition:
+            border-color $transition-default,
+            box-shadow $transition-default,
+            transform $transition-default;
+        box-sizing: border-box; // paddingのはみ出しを防止
         &:focus {
             outline: none;
-            border-color: #0b7285;
+            border-color: $color-primary;
             box-shadow: 0 0 0 4px rgba(11, 114, 133, 0.12);
         }
     }
-
     textarea {
         resize: vertical;
         min-height: 180px;
     }
 }
-
 .form-actions {
     display: flex;
     flex-wrap: wrap;

@@ -41,6 +41,7 @@ body nav {
   justify-content: center;
   margin: 1rem 0 1.25rem;
   padding-inline: 1rem;
+  z-index: 1000;
 }
 body nav ul {
   width: 100%;
@@ -55,6 +56,22 @@ body nav ul {
   border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 18px;
   box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  body nav ul {
+    transform: translateY(150%);
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 1rem;
+  }
+  body nav ul.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 body nav ul li {
   display: inline-block;
@@ -106,10 +123,22 @@ body footer .cpr {
   border: 0;
   background: transparent;
   color: #062c31;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+.menu-toggle:hover {
+  background-color: rgba(11, 114, 133, 0.1);
 }
 
 .muted {
@@ -120,7 +149,7 @@ body footer .cpr {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.7rem 1rem;
+  padding: 0.7rem 1.2rem;
   border-radius: 999px;
   background: linear-gradient(135deg, #1e3a8a, #1e40af);
   color: #fff;
@@ -134,18 +163,17 @@ body footer .cpr {
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 0.8rem 2rem rgba(30, 58, 138, 0.32);
+  color: #fff;
 }
 .btn:active {
   transform: translateY(0);
   box-shadow: 0 0.4rem 1rem rgba(30, 58, 138, 0.2);
 }
-
 .btn.ghost {
   background: transparent;
   border: 2px solid #1e3a8a;
   color: #1e3a8a;
   box-shadow: none;
-  transition: all 0.2s ease;
 }
 .btn.ghost:hover {
   background: rgba(30, 58, 138, 0.08);
@@ -254,6 +282,7 @@ body footer .cpr {
   color: #0f172a;
   font: inherit;
   transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+  box-sizing: border-box;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
