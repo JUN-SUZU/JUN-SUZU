@@ -91,6 +91,12 @@ p {
   position: absolute;
   border-radius: 0.5rem;
 }
+.card .card__image__container .card__image__cover.monitorob__cardname {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(100, 149, 237, 0.3)), no-repeat center center;
+}
+.card .card__image__container .card__image__cover.tumugi__cardname {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(147, 112, 219, 0.3)), no-repeat center center;
+}
 .card .card__image__container .card__image__cover.kokone__cardname {
   background: radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(255, 32, 125, 0.3)), no-repeat center center;
 }
@@ -99,9 +105,6 @@ p {
 }
 .card .card__image__container .card__image__cover.iw__cardname {
   background: radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(251, 196, 131, 0.3)), no-repeat center center;
-}
-.card .card__image__container .card__image__cover.ab__cardname {
-  background: radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(0, 191, 255, 0.3)), no-repeat center center;
 }
 .card .card__image__container .card__image__cover.youtube__cardname {
   background: radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(255, 0, 0, 0.1)), no-repeat center center;

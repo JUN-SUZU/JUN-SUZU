@@ -14,35 +14,7 @@ main {
     section {
         padding: 1rem;
         @media screen and (min-width: 768px) {
-            padding-inline: 2rem;
-        }
-        .title__text {
-            font-size: 2rem;
-            margin: 1rem auto;
-            font-family: "Gen no Kaku Gothic Bold", sans-serif;
-            width: fit-content;
-            margin-bottom: 1rem;
-            padding: 0.5rem;
-            background-image: linear-gradient(to right, #2784cb53, #49a9f2a2);
-            background-repeat: no-repeat;
-            transition:
-                background-position 0.3s ease-out,
-                background-size 0.3s ease-out;
-            user-select: none;
-            animation: title__text__load 1s ease-out;
-            @media screen and (min-width: 768px) {
-                font-size: max(2rem, 3vw);
-            }
-            @keyframes title__text__load {
-                0% {
-                    background-size: 0 100%;
-                    background-position: -100% -100%;
-                }
-                100% {
-                    background-size: 100% 100%;
-                    background-position: 0 0;
-                }
-            }
+            padding-inline: 200px;
         }
         article {
             width: 100%;
@@ -86,6 +58,7 @@ main {
                     font-size: 1.2rem;
                     font-weight: bold;
                     font-family: "Yu Gothic", "Meiryo", "Hiragino Kaku Gothic Pro", "Noto Sans JP", sans-serif;
+                    word-break: auto-phrase;
                     @media screen and (max-width: 767px) {
                         font-size: 0.9rem;
                     }
@@ -98,6 +71,18 @@ main {
                 height: 30vw;
                 max-height: 300px;
                 min-height: 180px;
+                object-fit: cover;
+            }
+            &#monitorob {
+                text-align: left;
+                background-position: bottom left;
+            }
+            &#tumugi {
+                text-align: right;
+                background-position: bottom right;
+                h1 {
+                    margin-inline: auto 0;
+                }
             }
             &#kokone {
                 text-align: left;

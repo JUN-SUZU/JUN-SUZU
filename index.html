@@ -9,7 +9,7 @@
     <meta content="JUN-SUZUの公式ホームページ" name="description">
     <meta name="keywords" content="">
     <meta name="author" content="JUN-SUZU">
-    <meta name="cpr" content="© 2024 JUN-SUZU">
+    <meta name="cpr" content="© 2026 JUN-SUZU">
     <meta name="language" content="ja">
     <meta name="format-detection" content="telephone=no,email=no,address=no">
     <meta name="theme-color" content="#6ad5f3">
@@ -19,80 +19,111 @@
     <link rel="stylesheet" type="text/css" href="/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/css/base.css">
     <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="/">JUN-SUZU</a>
+            <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-label="メニューを開く">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+        </div>
     </header>
     <main>
         <div class="hidden__text__accessibility">
             <p>ナビゲーション</p>
             <a href="/" alt="ホーム画面へ移動">ホーム</a>
-            <a href="/works/" alt="制作物一覧画面へ移動">制作物</a>
+            <a href="/projects/" alt="プロジェクトの詳細な説明画面へ移動">プロジェクト</a>
             <a href="/links/" alt="リンク集画面へ移動">リンク集</a>
             <a href="/donate/" alt="寄付を贈る画面へ移動">寄付</a>
             <a href="/contact/" alt="お問い合わせ画面へ移動">お問い合わせ</a>
         </div>
         <section>
             <article id="hero">
-                <h1 id="heroCaption">全ての人々に、情報技術への道を</h1>
-                <div class="sentence">
-                    <p>このホームページページは、障がいを持つ人々を含め全ての人々がご利用しやすいようにアクセシビリティに配慮して設計されています。</p>
-                    <p>私は、情報技術を学び、活用することで、障がいの有無に関わらず、全ての人々が自分の可能性を広げることができる社会を目指しています。</p>
-                    <p>私の制作物やリンク集を通じて、情報技術への理解を深め、自分の可能性を広げる一助となれば幸いです。</p>
-                    <p>ご利用いただいている皆様からのご感想やご意見をお待ちしております。</p>
+                <div class="hero-inner container">
+                    <h1 id="heroCaption">JUN-SUZU</h1>
+                    <p class="lead">フルスタックエンジニア / 自宅サーバー運用者 — サービスとコミュニティを運営しています。</p>
+                    <p class="ctas"><a class="btn" href="/projects/">プロジェクトを見る</a> <a class="btn ghost" href="/contact/">お問い合わせ</a></p>
                 </div>
             </article>
-            <article id="whoamI">
-                <h1 id="whoamICaption">JUN-SUZU</h1>
-                <div class="sentence">
-                    <p>私は、日本の高校生プログラマーです。</p>
-                    <p>様々な分野のアプリケーション開発経験があり、サーバーインフラからOS・ミドルウェア・フロントエンドまで幅広く対応できます。</p>
-                    <p>また、Webデザインやデータベース設計、サーバー運営なども行っています。</p>
-                    <p>私の制作物やリンク集を通じて、情報技術への理解を深め、自分の可能性を広げる一助となれば幸いです。</p>
+            <article id="representativeProject">
+                <h1 id="representativeProjectCaption">代表的なプロジェクト</h1>
+                <div class="projects_container">
+                    <div class="project">
+                        <h2>monitorob</h2>
+                        <p>monitorobは、指定したプログラムをバックグラウンドで起動・監視し、 万が一クラッシュした際には自動で再起動を行うプロセス管理ツール（スーパーバイザー）です。 </p>
+                        <p>リッチなターミナルUI（TUI）を通じて、プロセスの状態確認、ログの取得、安全な停止などの操作を直感的に行えます。</p>
+                        <a href="https://github.com/JUN-SUZU/monitorob">monitorob(GitHub)にアクセス</a>
+                    </div>
+                    <div class="project">
+                        <h2>MIRAI</h2>
+                        <p>MIRAIは、私が開発したDiscord認証BOTで、Webサーバーを使用してユーザーのIPアドレスを検証する機能を持っています。</p>
+                        <p>ReCAPTCHAでのロボット検証やIP-APIを用いたVPN検出により、ユーザーが匿名性を悪用して犯罪を犯すことを防止し、コミュニティの健全性と安全性を確保します。</p>
+                        <a href="https://mirai.jun-suzu.net">MIRAI(公式サイト)にアクセス</a>
+                    </div>
+                    <div class="project">
+                        <h2>TUMUGI</h2>
+                        <p>TUMUGIは、私が開発したDiscordVC接続BOTで、Discordサーバー間のVCを接続して、異なるサーバーの人と音声通話を楽しめます。</p>
+                        <p>Rust を用いた低レイヤーでの UDP 高速処理により、多人数接続時でも安定した音声ミキシングを実現しました。</p>
+                        <p>スケーラビリティを重視した設計により、理論上は数万人規模の同時接続にも対応可能な高いパフォーマンスを誇ります。</p>
+                        <a href="https://tumugi.jun-suzu.net">TUMUGI(公式サイト)にアクセス</a>
+                    </div>
+                    <div class="project">
+                        <h2>工房鯖</h2>
+                        <p>Minecraftの工業MODを使用したサーバーの運用を行っております。これには、様々なMODの導入、サーバーの管理、プレイヤーコミュニティの運営などが含まれます。</p>
+                        <p>また、プレイヤーからの要望に応じて、Javaで新たなMODを独自に開発することもあります。</p>
+                        <a href="https://workshop.jun-suzu.net">工房鯖(公式サイト)にアクセス</a>
+                    </div>
                 </div>
             </article>
             <article id="profile">
                 <h1 id="profileCaption">プロフィール</h1>
-                <div class="sentence">
+                <div class="statement">
+                    <h2>基本情報</h2>
                     <p>Name : JUN-SUZU</p>
+                    <p>Occupation : フルスタックエンジニア、自宅サーバー運用者</p>
+                    <p>Experience : 5年以上のプログラミング経験(C++, Node.js 等)、複数のプロジェクトでの実績</p>
+                    <p>Education : 筑波大学情報科学類在学中 ITF.Coins.26</p>
                     <p>Birthday : 2006年10月8日</p>
                     <p>Location : 日本</p>
                     <p>Language : 日本語</p>
                     <p>Hobby&Favorite : プログラミング、PCいじり、アニメ鑑賞、スキー</p>
                 </div>
+                <div class="skills">
+                    <h2>スキルセット</h2>
+                    <ul>
+                        <li><strong>Languages:</strong> JavaScript, Rust, C++, C#, Java</li>
+                        <li><strong>Frameworks:</strong> Express.js (Node.js runtime)</li>
+                        <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Redis (KVS, Pub/Sub)</li>
+                        <li><strong>Messaging / IPC:</strong> NATS JetStream, Unix Domain Socket (High-performance IPC)</li>
+                        <li><strong>Infrastructure:</strong> Proxmox (Self-hosted Lab), LXC</li>
+                        <li><strong>R&D / Re-invention (車輪の再発明):</strong>
+                            <ul>
+                                <li><strong>monitorob:</strong> 自作のプロセス管理ツール（スーパーバイザー）をC++でスクラッチ実装</li>
+                                <li><strong>Iroha AI:</strong> 自作AIを開発中(形態素解析をC++ネイティブコードでスクラッチ実装済み)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </article>
         </section>
     </main>
     <nav>
-        <ul>
-            <li><a href="/"><img src="/assets/img/md-home.svg" alt="HomeIconLooksLikeHouse"
-                        class="inline__icon">Home</a></li>
-            <li><a href="/works/"><img src="/assets/img/md-appstore.svg" alt="AppStoreIconLooksLikeBag"
-                        class="inline__icon">Works</a></li>
-            <li><a href="/links/"><img src="/assets/img/md-link.svg" alt="LinkIconLooksLikeChain"
-                        class="inline__icon">Links</a></li>
-            <li><a href="/donate/"><img src="/assets/img/md-heart.svg" alt="HeartIconLooksLikeHeart"
-                        class="inline__icon">Donate</a></li>
-            <li><a href="/contact/"><img src="/assets/img/md-contact.svg" alt="ContactIconLooksLikeHumanShape"
-                        class="inline__icon">Contact</a></li>
+        <ul class="container nav-list" id="mainNav">
+            <li><a href="/"><ion-icon name="home-outline" class="inline__icon"></ion-icon>Home</a></li>
+            <li><a href="/projects/"><ion-icon name="layers-outline" class="inline__icon"></ion-icon>Projects</a></li>
+            <li><a href="/links/"><ion-icon name="link-outline" class="inline__icon"></ion-icon>Links</a></li>
+            <li><a href="/donate/"><ion-icon name="heart-outline" class="inline__icon"></ion-icon>Donate</a></li>
+            <li><a href="/contact/"><ion-icon name="mail-outline" class="inline__icon"></ion-icon>Contact</a></li>
         </ul>
     </nav>
     <footer>
-        <p class="cpr">© 2024 JUN-SUZU</p>
+        <p class="cpr">© 2026 JUN-SUZU</p>
     </footer>
-    <script>
-        // active__hover__caption
-        document.getElementById('heroCaption').addEventListener('mouseover', function () {
-            document.getElementById('heroCaption').classList.add('active__hover__caption');
-        });
-        document.getElementById('whoamICaption').addEventListener('mouseover', function () {
-            document.getElementById('whoamICaption').classList.add('active__hover__caption');
-        });
-        document.getElementById('profileCaption').addEventListener('mouseover', function () {
-            document.getElementById('profileCaption').classList.add('active__hover__caption');
-        });
-    </script>
+    <script src="/script/main.js"></script>
 </body>
 
 </html>

@@ -15,38 +15,7 @@ main section {
 }
 @media screen and (min-width: 768px) {
   main section {
-    padding-inline: 2rem;
-  }
-}
-main section .title__text {
-  font-size: 2rem;
-  margin: 1rem auto;
-  font-family: "Gen no Kaku Gothic Bold", sans-serif;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  background-image: linear-gradient(to right, rgba(39, 132, 203, 0.3254901961), rgba(73, 169, 242, 0.6352941176));
-  background-repeat: no-repeat;
-  transition: background-position 0.3s ease-out, background-size 0.3s ease-out;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  animation: title__text__load 1s ease-out;
-}
-@media screen and (min-width: 768px) {
-  main section .title__text {
-    font-size: max(2rem, 3vw);
-  }
-}
-@keyframes title__text__load {
-  0% {
-    background-size: 0 100%;
-    background-position: -100% -100%;
-  }
-  100% {
-    background-size: 100% 100%;
-    background-position: 0 0;
+    padding-inline: 200px;
   }
 }
 main section article {
@@ -54,13 +23,15 @@ main section article {
   margin-block: 2rem;
   background-image: linear-gradient(to right, #333, #333);
   background-size: 300px 2px;
-  padding-bottom: 1.2em;
-  background-repeat: no-repeat;
 }
 @media screen and (min-width: 768px) {
   main section article {
     background-size: 500px 2px;
   }
+}
+main section article {
+  padding-bottom: 1.2em;
+  background-repeat: no-repeat;
 }
 main section article .panel__float {
   display: flex;
@@ -98,6 +69,7 @@ main section article .holder__text .sentence {
   font-size: 1.2rem;
   font-weight: bold;
   font-family: "Yu Gothic", "Meiryo", "Hiragino Kaku Gothic Pro", "Noto Sans JP", sans-serif;
+  word-break: auto-phrase;
 }
 @media screen and (max-width: 767px) {
   main section article .holder__text .sentence {
@@ -111,6 +83,19 @@ main section article img {
   height: 30vw;
   max-height: 300px;
   min-height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section article#monitorob {
+  text-align: left;
+  background-position: bottom left;
+}
+main section article#tumugi {
+  text-align: right;
+  background-position: bottom right;
+}
+main section article#tumugi h1 {
+  margin-inline: auto 0;
 }
 main section article#kokone {
   text-align: left;
