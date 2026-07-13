@@ -17,9 +17,7 @@ Check out some of my repositories where I experiment with different technologies
 
 ## 📊 GitHub Stats
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=JUN-SUZU&layout=compact&theme=tokyonight&hide_border=true&langs_count=10)
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=JUN-SUZU&show_icons=true&theme=tokyonight)
+![Stats](./profile/stats.svg)
 
 ![GitHub Torophies](https://github-profile-trophy-orcin-nine.vercel.app/?username=jun-suzu)
 
