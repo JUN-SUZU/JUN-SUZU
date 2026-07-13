@@ -17,7 +17,7 @@ Check out some of my repositories where I experiment with different technologies
 
 ## 📊 GitHub Stats
 
-![Stats](./profile/stats.svg)
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=JUN-SUZU&layout=donut&langs_count=16)](https://github-stats-extended.vercel.app/api/top-langs?username=JUN-SUZU&layout=donut&langs_count=16)
 
 ![GitHub Torophies](https://github-profile-trophy-orcin-nine.vercel.app/?username=jun-suzu)
 
